@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zeyada&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden; /* Menghilangkan scroll samping (kanan-kiri) */
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Untuk Chrome, Safari, dan Opera */
+}
+
+.container {
+    display: flex;
+    gap: 120px;
+    padding: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-attachment: fixed; /*untuk tidak ikut scroll*/
+    width: 100%;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo di kiri, Menu di kanan */
+    align-items: center;
+    padding: 30px 80px;
+    background-color: white; /* Atau transparan sesuai selera */
+    font-family: 'Montserrat', sans-serif;
+    position: sticky;
+    top: 0;           /* Menempel tepat di bagian atas layar */
+    z-index: 1000;    /* Agar navbar selalu berada di atas elemen lain (seperti foto) */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    font-weight: 400; /* Extra Bold agar menonjol */
+    color: #fdfd96; 
+    margin-left: 85px;
+    letter-spacing: 2px;       /* Jarak antar huruf agar estetik */
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none; /* Menghilangkan titik-titik list */
+    gap: 50px;        /* Jarak antar menu */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.nav-links a.active {
+    color: #fbc2eb; /* Warna biru/ungu untuk menu yang aktif */
+}
+
+#about {
+    scroll-margin-top: 110px;
+}
+
+.container img {
+    border-radius: 20px;
+    width: 340px;
+    height: auto;
+    margin-top: 30px;
+    padding-left: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.buttons {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+}
+
+/* Style dasar untuk kedua tombol */
+.btn-hire, .btn-cv {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 15px 35px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: 0.4s;
+}
+
+/* Tombol Gradien (HIRE ME) */
+.btn-hire {
+    background: linear-gradient(to right, #fdfd96, #fbc2eb); 
+    color: #444; /* Warna teks abu gelap agar terbaca jelas */
+    border: none;
+    box-shadow: 0 4px 15px rgba(251, 194, 235, 0.4);
+}
+
+/* Tombol Putih Outline (GET CV) */
+.btn-cv {
+    background: white;
+    color: #333;
+    border: 2px solid #fbc2eb; /* Outline mengikuti warna tema */
+}
+
+.btn-hire:hover {
+    background: linear-gradient(to right, #fbc2eb, #fdfd96);
+    transform: translateY(-2px);
+}
+
+.btn-cv:hover {
+    background: #f3f4f6;
+    transform: translateY(-3px);
+}
+
+.data {
+    text-align: left;
+    padding-top: 40px;
+}
+
+.data h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Pilih Bold/Extra Bold */
+    text-transform: uppercase; /* Agar otomatis jadi huruf kapital semua */
+    letter-spacing: 2px; /* Memberi sedikit jarak antar huruf */
+    font-size: 32px;
+}
+
+.data p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding-top: 28px;
+}
+
+.content-1 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    gap: 120px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.judul {
+    text-align: left;
+    padding-top: 40px;
+}
+
+.judul h3 {
+    font-size: 32px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.judul p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    padding-top: 28px;
+    color: #444;
+    text-align: justify;
+    max-width: 600px;
+}
+
+.content-1 img {
+    border-radius: 30px;
+    align-items: right;
+    width: 280px;
+    height: auto;
+    padding-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.content-2 {
+    display: flex;
+    background-size: cover;
+    background-image: url('bg.jpg');
+    background-attachment: fixed;
+    justify-content: center;
+    gap: 40px;
+    padding: 100px 60px;
+    flex-wrap: wrap;
+}
+
+.content-2 h3 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%; /*harus “dipaksa” pakai width: 100%*/
+    letter-spacing: 2px; /* Memberi sedikit jarak antar huruf */
+    font-size: 32px;
+}
+
+.card {
+    background: #ffffff;
+    width: 250px;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.card img {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #555;
+}
+
+#db h3 {
+    padding-top: 5px;
+}
+
+#db p {
+    padding-top: 13px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(236, 5, 120, 0.445);
+}
+
+#services {
+    scroll-margin-top: 20px;
+}
+
+.footer {
+    font-family: 'Segoe UI';
+    font-weight: 400;
+    background-color: white;
+    padding: 40px 0;
+    text-align: center;
+    padding-bottom: 25px;
+    color: #4b4c4d;
+}
+
+.footer a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer a:hover {
+    opacity: 1;
+}
+
+.CPbawah {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .logo {
+        margin-left: 0;
+        font-size: 24px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .container img {
+        width: 220px;
+    }
+
+    .data {
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .data h3 {
+        font-size: 24px;
+    }
+
+    .data p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        justify-content: center;
+        padding: 40px 20px;
+        gap: 40px;
+        height: auto;
+        text-align: center;
+    }
+
+    .content-1 {
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 40px;
+        height: auto;
+        text-align: center;
+    }
+
+    .judul {
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .judul p {
+        max-width: 100%;
+        text-align: justify;
+    }
+
+    .content-1 img {
+        width: 220px;
+    }
+
+    .content-2 {
+        padding: 60px 20px;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .footer a {
+        width: 35px;
+        height: 35px;
+        line-height: 33px;
+        font-size: 18px;
+    }
+}
