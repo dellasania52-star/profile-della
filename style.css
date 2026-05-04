@@ -546,6 +546,22 @@ form button {
 }
 
 @media (max-width: 768px) {
+    .container,
+    .content-1,
+    .content-2,
+    .pesan,
+    .darkmode .container,
+    .darkmode .content-1,
+    .darkmode .content-2,
+    .darkmode .pesan {
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        height: auto;
+    }
+    
     .navbar {
         flex-direction: column;
         padding: 12px 20px;
