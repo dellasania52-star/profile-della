@@ -554,7 +554,7 @@ form button {
     .darkmode .content-1,
     .darkmode .content-2,
     .darkmode .pesan {
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
