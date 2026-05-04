@@ -33,7 +33,7 @@ document.addEventListener('click', (e) => {
     }
 });
 
-input.addEventListener('keypress', function(e) {
+input.addEventListener('keydown', function(e) {
     if (e.key === 'Enter') {
         e.preventDefault();
 
